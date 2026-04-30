@@ -65,7 +65,7 @@ This project is configured to be uploaded and hosted on **Google Cloud Platform 
 
 ## ©️ License & Copyright
 
-**Copyright (c) 2026 Ahmed**  
+**Copyright (c) 2026 Ahmed Reja Sk**
 All Rights Reserved.
 
 This project was built for educational and demonstration purposes. It is not an official government application. For official election data, please always refer to the Election Commission of India (ECI) website.
