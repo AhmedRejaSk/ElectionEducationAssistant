@@ -30,19 +30,19 @@ export default function MythBuster({ t, appLanguage }) {
       <p className="text-gray-600 mb-6">{t.mythDesc}</p>
 
       <form onSubmit={handleSubmit} className="mb-6 space-y-4">
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-3">
           <input 
             type="text" 
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t.placeholder}
-            className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 w-full"
             disabled={loading}
           />
           <button 
             type="submit" 
             disabled={loading || !query.trim()}
-            className="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors disabled:opacity-50"
+            className="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors disabled:opacity-50"
           >
             {loading ? t.checkingBtn : t.checkBtn}
           </button>

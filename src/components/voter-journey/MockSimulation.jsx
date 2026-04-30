@@ -41,8 +41,8 @@ export default function MockSimulation({ t }) {
           <div className="space-y-3">
             {candidates.map((c) => (
               <div key={c.id} className="flex items-center justify-between bg-white p-3 rounded shadow-sm">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 flex items-center justify-center bg-white border border-gray-200 rounded p-1">
+                <div className="flex items-center gap-3 sm:gap-4 flex-1">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white border border-gray-200 rounded p-1 shrink-0">
                     <img src={c.logo} alt={`${c.party} logo`} className="max-w-full max-h-full object-contain" />
                   </div>
                   <div>
@@ -52,7 +52,7 @@ export default function MockSimulation({ t }) {
                 </div>
                 <button 
                   onClick={() => handleVote(c)}
-                  className="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700 flex items-center justify-center shadow-inner active:bg-blue-800 transition-all border-4 border-gray-300"
+                  className="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700 flex items-center justify-center shadow-inner active:bg-blue-800 transition-all border-4 border-gray-300 shrink-0 ml-2"
                   aria-label={`Vote for ${c.name}`}
                 >
                   <div className="w-4 h-4 bg-white rounded-full opacity-50"></div>
