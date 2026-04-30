@@ -59,7 +59,23 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to explore
 Built with a focus on simplicity, the application uses an agentic state flow to handle user queries securely. By leveraging Next.js Server Actions and native `fetch` over bulky SDK libraries, the project maintains an ultra-fast load time and high Lighthouse scores. 
 
 ## ☁️ Deployment
-This project is configured to be uploaded and hosted on **Google Cloud Platform (GCP)**. Continuous deployment workflows can be easily attached via Cloud Build or deployed directly using Vercel/Firebase.
+
+The project is officially deployed and hosted securely on **Google Cloud Run**.
+
+🌍 **Live Website:** [VoterGuide AI on Cloud Run](https://voterguide-ai-60086143162.us-central1.run.app)
+
+### Deploying to Cloud Run
+The application is containerized using a multi-stage `Dockerfile` and optimized using Next.js `standalone` output mode to keep the Docker image footprint ultra-lightweight.
+
+To deploy your own instance to Google Cloud Platform, authenticate with your Google account using `gcloud auth login` and run the following command in your terminal:
+
+```bash
+gcloud run deploy voterguide-ai \
+  --source . \
+  --region=us-central1 \
+  --allow-unauthenticated \
+  --set-env-vars GEMINI_API_KEY="your_api_key_here"
+```
 
 ---
 
